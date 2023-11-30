@@ -1,0 +1,46 @@
+/* Forecast.css */
+.forecast-container {
+    display: flex; /* Use flexbox instead of grid */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    gap: 20px; /* Adds space between forecast items */
+    padding: 20px;
+}
+
+.forecast-item {
+    flex: 0 0 auto; /* Do not grow or shrink, use auto basis */
+    width: 200px; /* Maintain a fixed width for each item */
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #eaeaea;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center; /* Center the text within each forecast item */
+    transition: transform 0.2s ease-in-out;
+}
+
+.forecast-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.forecast-date {
+    font-weight: bold;
+}
+
+.forecast-temperature {
+    color: #e76f51;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.forecast-weather {
+    font-size: 0.9rem;
+    color: #2a9d8f;
+}
+
+/* Media query for smaller screens to adjust layout */
+@media (max-width: 600px) {
+    .forecast-item {
+        width: 80%; /* Adjust width on smaller screens */
+    }
+}
